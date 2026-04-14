@@ -3,63 +3,73 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Violencia de Género</title>
+<title>Concientización sobre la Violencia de Género</title>
 
 <style>
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(to right, #f3e5f5, #ffffff);
+    background: #121212;
+    color: #f5f5f5;
 }
 
 header {
-    background: linear-gradient(135deg, #6a1b9a, #8e44ad);
-    color: white;
+    background: linear-gradient(135deg, #b71c1c, #880e4f);
     text-align: center;
     padding: 40px;
 }
 
 nav {
-    background: #4a148c;
-    padding: 10px;
+    background: #1e1e1e;
     text-align: center;
+    padding: 10px;
 }
 
 nav a {
-    color: white;
+    color: #ff5252;
     margin: 10px;
     text-decoration: none;
     font-weight: bold;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: white;
 }
 
 section {
-    padding: 30px;
     margin: 20px;
-    background: white;
+    padding: 25px;
+    background: #1e1e1e;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 h2 {
-    color: #6a1b9a;
+    color: #ff5252;
 }
 
 img {
     width: 100%;
     max-width: 500px;
     border-radius: 10px;
-    display: block;
-    margin: 15px auto;
+    margin-top: 10px;
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background: #ddd;
+    background: #000;
+}
+
+/* BOTÓN SECRETO */
+.secret-btn {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0.1;
+    cursor: pointer;
+}
+.secret-btn:hover {
+    opacity: 1;
 }
 </style>
 
@@ -69,58 +79,70 @@ footer {
 
 <header>
     <h1>Violencia de Género</h1>
-    <p>Concientización, información y prevención</p>
+    <p>Informar es prevenir</p>
 </header>
 
 <nav>
-    <a href="#definicion">Definición</a>
+    <a href="#def">Definición</a>
     <a href="#tipos">Tipos</a>
-    <a href="#causas">Causas</a>
-    <a href="#prevencion">Prevención</a>
+    <a href="#impacto">Impacto</a>
+    <a href="#prev">Prevención</a>
 </nav>
 
-<section id="definicion">
+<section id="def">
     <h2>¿Qué es la violencia de género?</h2>
     <p>
-        Es cualquier tipo de violencia ejercida contra una persona por su género.
-        Incluye daño físico, psicológico, sexual o económico. Es un problema social
-        que afecta a millones de personas en el mundo.
+        Es cualquier acto de violencia basado en el género que cause daño físico,
+        psicológico o sexual. Este problema afecta a millones de personas en todo el mundo
+        y está relacionado con la desigualdad social.
     </p>
-    <img src="https://cdn.pixabay.com/photo/2017/03/27/14/56/woman-2179015_1280.jpg">
+    <img src="https://images.unsplash.com/photo-1593113598332-cd59a93b6b5f">
 </section>
 
 <section id="tipos">
     <h2>Tipos de violencia</h2>
     <ul>
-        <li>Física</li>
-        <li>Psicológica</li>
-        <li>Sexual</li>
-        <li>Económica</li>
+        <li>Física: golpes o agresiones</li>
+        <li>Psicológica: insultos, manipulación</li>
+        <li>Sexual: abuso o coerción</li>
+        <li>Económica: control del dinero</li>
     </ul>
-    <img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/abuse-1867672_1280.jpg">
+    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
 </section>
 
-<section id="causas">
-    <h2>Causas</h2>
+<section id="impacto">
+    <h2>Impacto en la sociedad</h2>
     <p>
-        La desigualdad de género, los estereotipos y la falta de educación
-        en valores de respeto son factores importantes que provocan este problema.
+        La violencia de género no solo afecta a las víctimas, sino también a la sociedad,
+        generando problemas de salud, económicos y sociales. Puede provocar ansiedad,
+        depresión y afectar el desarrollo de comunidades enteras.
     </p>
 </section>
 
-<section id="prevencion">
+<section id="prev">
     <h2>¿Cómo prevenirla?</h2>
     <ul>
-        <li>Promover la igualdad</li>
-        <li>Educar desde jóvenes</li>
-        <li>Denunciar situaciones</li>
-        <li>Apoyar a las víctimas</li>
+        <li>Educación en igualdad</li>
+        <li>Respeto en relaciones</li>
+        <li>Denuncia de abusos</li>
+        <li>Apoyo psicológico</li>
     </ul>
 </section>
 
 <footer>
     <p>Proyecto escolar | 2026</p>
 </footer>
+
+<!-- BOTÓN OCULTO -->
+<div class="secret-btn" onclick="mostrarSecreto()">
+    🔍
+</div>
+
+<script>
+function mostrarSecreto() {
+    alert("Tú no deberías estar aquí 👀");
+}
+</script>
 
 </body>
 </html>
