@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Violencia de Género</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0d0d0d;
+    color: #f5f5f5;
+}
+
+header {
+    background: linear-gradient(135deg, #b71c1c, #4a148c);
+    text-align: center;
+    padding: 40px;
+}
+
+nav {
+    background: #1a1a1a;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    color: #ff5252;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    margin: 20px;
+    padding: 25px;
+    background: #1a1a1a;
+    border-radius: 15px;
+}
+
+h2 {
+    color: #ff5252;
+}
+
+img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+/* PANTALLA HACKER */
+#hackerScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    color: #00ff00;
+    font-family: monospace;
+    display: none;
+    padding: 20px;
+}
+
+input {
+    background: black;
+    border: none;
+    color: #00ff00;
+    font-size: 16px;
+    outline: none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Violencia de Género</h1>
+    <p>Informar es prevenir</p>
+</header>
+
+<nav>
+    <a href="#">Inicio</a>
+</nav>
+
+<section>
+    <h2>¿Qué es?</h2>
+    <p>La violencia de género es un problema social que afecta a millones de personas.</p>
+</section>
+
+<!-- PANTALLA HACKER -->
+<div id="hackerScreen">
+    <p>> Acceso detectado...</p>
+    <p>> Ingresa contraseña:</p>
+    <input type="password" id="passInput">
+    <p id="resultado"></p>
+</div>
+
+<script>
+let clave = "";
+const codigo = "gender";
+
+document.addEventListener("keydown", function(e) {
+    clave += e.key.toLowerCase();
+
+    if (!codigo.startsWith(clave)) {
+        clave = "";
+    }
+
+    if (clave === codigo) {
+        document.getElementById("hackerScreen").style.display = "block";
+        clave = "";
+    }
+});
+
+document.getElementById("passInput").addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+        let pass = this.value;
+
+        if (pass === "1234") {
+            document.getElementById("resultado").innerHTML = "> Tú no deberías estar aquí 👀";
+        } else {
+            document.getElementById("resultado").innerHTML = "> Acceso denegado...";
+        }
+    }
+});
+</script>
+
+</body>
+</html>
